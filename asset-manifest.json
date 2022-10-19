@@ -1,15 +1,15 @@
 {
-  "main.css": "/nicholasthiago.github.io/static/css/main.0f2c4c07.chunk.css",
-  "main.js": "/nicholasthiago.github.io/static/js/main.9f681cf4.chunk.js",
-  "main.js.map": "/nicholasthiago.github.io/static/js/main.9f681cf4.chunk.js.map",
-  "static/js/1.bfa36157.chunk.js": "/nicholasthiago.github.io/static/js/1.bfa36157.chunk.js",
-  "static/js/1.bfa36157.chunk.js.map": "/nicholasthiago.github.io/static/js/1.bfa36157.chunk.js.map",
-  "static/js/2.7587d2c9.chunk.js": "/nicholasthiago.github.io/static/js/2.7587d2c9.chunk.js",
-  "static/js/2.7587d2c9.chunk.js.map": "/nicholasthiago.github.io/static/js/2.7587d2c9.chunk.js.map",
-  "runtime~main.js": "/nicholasthiago.github.io/static/js/runtime~main.d63d47cd.js",
-  "runtime~main.js.map": "/nicholasthiago.github.io/static/js/runtime~main.d63d47cd.js.map",
-  "static/css/main.0f2c4c07.chunk.css.map": "/nicholasthiago.github.io/static/css/main.0f2c4c07.chunk.css.map",
-  "index.html": "/nicholasthiago.github.io/index.html",
-  "precache-manifest.78fcd0e27e0f112fbb1c4a9a641e3f3d.js": "/nicholasthiago.github.io/precache-manifest.78fcd0e27e0f112fbb1c4a9a641e3f3d.js",
-  "service-worker.js": "/nicholasthiago.github.io/service-worker.js"
+  "main.css": "/static/css/main.0f2c4c07.chunk.css",
+  "main.js": "/static/js/main.9f681cf4.chunk.js",
+  "main.js.map": "/static/js/main.9f681cf4.chunk.js.map",
+  "static/js/1.bfa36157.chunk.js": "/static/js/1.bfa36157.chunk.js",
+  "static/js/1.bfa36157.chunk.js.map": "/static/js/1.bfa36157.chunk.js.map",
+  "static/js/2.7587d2c9.chunk.js": "/static/js/2.7587d2c9.chunk.js",
+  "static/js/2.7587d2c9.chunk.js.map": "/static/js/2.7587d2c9.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.0da2dd41.js",
+  "runtime~main.js.map": "/static/js/runtime~main.0da2dd41.js.map",
+  "static/css/main.0f2c4c07.chunk.css.map": "/static/css/main.0f2c4c07.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.7221ed4f3984cf96241613a5585328c2.js": "/precache-manifest.7221ed4f3984cf96241613a5585328c2.js",
+  "service-worker.js": "/service-worker.js"
 }
