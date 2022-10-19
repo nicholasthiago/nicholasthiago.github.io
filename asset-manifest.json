@@ -1,7 +1,7 @@
 {
   "main.css": "/nicholasthiago.github.io/static/css/main.0f2c4c07.chunk.css",
-  "main.js": "/nicholasthiago.github.io/static/js/main.f2ae44e9.chunk.js",
-  "main.js.map": "/nicholasthiago.github.io/static/js/main.f2ae44e9.chunk.js.map",
+  "main.js": "/nicholasthiago.github.io/static/js/main.9f681cf4.chunk.js",
+  "main.js.map": "/nicholasthiago.github.io/static/js/main.9f681cf4.chunk.js.map",
   "static/js/1.bfa36157.chunk.js": "/nicholasthiago.github.io/static/js/1.bfa36157.chunk.js",
   "static/js/1.bfa36157.chunk.js.map": "/nicholasthiago.github.io/static/js/1.bfa36157.chunk.js.map",
   "static/js/2.7587d2c9.chunk.js": "/nicholasthiago.github.io/static/js/2.7587d2c9.chunk.js",
@@ -10,6 +10,6 @@
   "runtime~main.js.map": "/nicholasthiago.github.io/static/js/runtime~main.d63d47cd.js.map",
   "static/css/main.0f2c4c07.chunk.css.map": "/nicholasthiago.github.io/static/css/main.0f2c4c07.chunk.css.map",
   "index.html": "/nicholasthiago.github.io/index.html",
-  "precache-manifest.d226e4d6016c059db23c35b47c0559ad.js": "/nicholasthiago.github.io/precache-manifest.d226e4d6016c059db23c35b47c0559ad.js",
+  "precache-manifest.78fcd0e27e0f112fbb1c4a9a641e3f3d.js": "/nicholasthiago.github.io/precache-manifest.78fcd0e27e0f112fbb1c4a9a641e3f3d.js",
   "service-worker.js": "/nicholasthiago.github.io/service-worker.js"
 }
