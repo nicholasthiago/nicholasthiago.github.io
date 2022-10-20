@@ -1,0 +1,79 @@
+
+// --------- Food Delivery - Styles --------- //
+
+// Fonts - Usage
+
+	@mixin font-logo {
+		font-size: 22px;
+		font-weight: 600;
+		text-transform: unset;
+	}
+
+	@mixin font-title {
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: unset;
+	}
+
+	@mixin font-body {
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: unset;
+	}
+
+
+// Fonts - Sized
+
+	@mixin font-xl {
+		font-size: 20px;
+		text-transform: unset;
+	}
+
+	@mixin font-lg {
+		font-size: 18px;
+		text-transform: unset;
+	}
+
+	@mixin font-md {
+		font-size: 16px;
+		text-transform: unset;
+	}
+
+	@mixin font-sm {
+		font-size: 14px;
+		text-transform: unset;
+	}
+
+	@mixin font-xs {
+		font-size: 12px;
+		text-transform: unset;
+	}
+
+// Fonts - Weighted
+
+	@mixin font-bold {
+		font-weight: 700;
+	}
+
+	@mixin font-semibold {
+		font-weight: 600;
+	}
+
+	@mixin font-medium {
+		font-weight: 500;
+	}
+
+	@mixin font-regular {
+		font-weight: 400;
+	}
+
+	@mixin font-light {
+		font-weight: 300;
+	}
+
+	$f-xlight	: 200;
+	$f-light	: 300;
+	$f-regular	: 400;
+	$f-medium	: 500;
+	$f-semibold	: 600;
+	$f-bold		: 700;

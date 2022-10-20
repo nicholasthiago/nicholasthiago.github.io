@@ -1,0 +1,178 @@
+@import 'utils/design';
+
+//	Prodyct Page - Styles
+
+.table-component-wrapper {
+	@include flex-col;
+	max-width: 90%;
+
+	.table-title {
+		@include flex-col;
+		align-self: flex-start;
+
+		h1 {
+			font-size: 22px;
+			color: $_dark01;
+			margin: 0 0 24px;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+
+	.table-wrapper {
+		max-width: 90%;
+		overflow: auto;
+	
+		// For Internet Explorer
+		& {
+			scrollbar-face-color: #F00;
+			scrollbar-track-color: $_purple;
+		}
+	}
+
+	.table-options {
+		@include flex-row;
+		width: 100%;
+		justify-content: space-between;
+
+		.table-search {
+			min-width: 48%;
+			margin: 0 16px 0 0;
+
+			input {
+				padding: 8px 16px;
+			}
+		}
+
+		.table-buttons {
+			@include flex-row;
+
+			.table-detailed-page {
+				margin: 4px 0;
+				padding: 8px 24px;
+
+				color: $_white;
+				font-weight: 500;
+				
+				background: $_purple;
+				border-radius: 4px;
+
+				&.disabled {
+					background: $_light04;
+				}
+			}
+
+			.table-button-new,
+			.table-button-print {
+				width: max-content;
+				margin: 4px 0;
+				padding: 8px 24px;
+				margin-left: 16px;
+				
+				color: $_white;
+				font-weight: 500;
+				
+				background: $_purple;
+				border-radius: 4px;
+			}
+		}
+	}
+
+	.table-detail {
+		@include flex-col;
+		background: #00000064;
+		height: 100vh;
+		width: 100vw;
+
+		position: fixed;
+		z-index: 24;
+		left: 0;
+		top: 0;
+
+		.modal-wrapper {
+			@include flex-col;
+			width: 50vw;
+			height: 80vh;
+			padding: 32px 48px;
+			background: $_white;
+			border-radius: 4px;
+			justify-content: flex-start;
+
+			h1 {
+				font-size: 24px;
+				font-weight: 600;
+				text-transform: uppercase;
+				margin: 0 0 32px;
+			}
+
+			.item-details {
+				@include flex-col;
+				width: 80%;
+				height: 80%;
+				flex-flow: column wrap;
+				align-items: flex-start;
+				justify-content: flex-start;
+				
+				h2 {
+					color: $_dark01;
+					margin: 0 0 8px;
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+				
+				h3 {
+					margin: 0 0 24px;
+					font-weight: 400;
+					background: $_light02;
+					padding: 4px 12px;
+					border-radius: 4px;
+				}
+				
+				h2,h3 {
+					width: max-content;
+					font-size: 14px;
+				}
+			}
+		}
+
+		&.modal-hide {
+			display: none;
+		}
+	}
+
+	.table-options-menu {
+		@include flex-col;
+		position: absolute;
+		display: none;
+
+		padding: 2px 2px;
+		background: $_light01;
+		border-radius: 4px;
+		border: 1px solid $_light02;
+		box-shadow: 0px 4px 8px #33333316;
+
+		animation:
+			opacityControl	0.3s,
+			fromCenter		0.1s;
+
+		&.active {
+			display: flex;
+		}
+
+		h3 {
+			font-family: 'Roboto', sans-serif !important;
+			width: 96px;
+			font-size: 14px;
+			padding: 8px 16px;
+			color: $_dark02;
+			transition: 0.3s;
+
+			@media (min-width:1024px) {
+				&:hover {
+					color: $_dark02;
+					background: #5C4DFF20;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@import 'utils/design';
+
+//	Switch Input - Styles
+
+.input-switch {
+	@include flex-col;
+	width: 40px;
+	height: 24px;
+	margin: 0;
+	padding: 0;
+
+	border-radius: 24px;
+	background: $_light01;
+	border: 1px solid $_light02;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	> button {
+		width: 24px;
+		height: 24px;
+		margin: 0;
+		padding: 0;
+		transition: 0.1s;
+		border-radius: 24px;
+
+		&.switch-on {
+			align-self: flex-start;
+			background: $_green;
+		}
+
+		&.switch-off {
+			align-self: flex-start;
+			background: $_red;
+			transform: translateX(16px);
+		}
+	}
+}

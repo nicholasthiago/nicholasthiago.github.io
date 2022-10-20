@@ -1,0 +1,60 @@
+@import 'utils/design';
+
+// --- Alert Message - Styles --- //
+
+.alert-msg-wrapper {
+	width: 100vw;
+	height: auto;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	.alert-msg-component {
+		width: auto;
+		height: auto;
+		margin: 24vh auto;
+		padding: 36px 48px;
+
+		border: 1px solid $_red;
+		border: 1px solid $_light01;
+		background: $_white;
+		border-radius: 4px;
+		box-shadow: 0px 4px 12px #00000016;
+
+		h2 {
+			margin: 0 0 24px;
+			font-size: 18px;
+			font-weight: 700;
+		}
+
+		h3 {
+			font-size: 16px;
+			font-weight: 500;
+		}
+
+		.alert-control {
+			margin: 36px 0 0;
+
+			button {
+				color: $_white;
+				padding: 8px 32px;
+				background: $_purple;
+
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: capitalize;
+
+				border-radius: 4px;
+				border: 1px solid $_purple;
+
+				&:nth-of-type(2) {
+					margin-left: 12px;
+					color: $_dark01;
+					background: $_white;
+					border: 1px solid $_light02;
+				}
+			}
+		}
+	}
+}

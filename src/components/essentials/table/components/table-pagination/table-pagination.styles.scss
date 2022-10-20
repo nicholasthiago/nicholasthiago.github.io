@@ -1,0 +1,39 @@
+@import 'utils/design';
+
+//	Table Pagination - Styles
+
+.table-pagination {
+	@include flex-row;
+	margin: 12px -12px;
+	align-self: flex-start;
+
+	.pagination-item {
+		@include flex-col;
+		color: $_dark02;
+		width: 28px;
+		height: 28px;
+		margin: 0 4px;
+		border: 1px solid $_light02;
+		border-radius: 4px;
+
+		&.first,
+		&.last {
+			margin: 0 12px;
+			.svg-type {
+				height: 16px;
+				svg > path {
+					fill: $_dark04;
+				}
+			}
+		}
+
+		&.last .svg-type {
+			transform: rotate(180deg);
+		}
+
+		&.selected-page {
+			background: $_light02;
+			color: $_dark04;
+		}
+	}
+}

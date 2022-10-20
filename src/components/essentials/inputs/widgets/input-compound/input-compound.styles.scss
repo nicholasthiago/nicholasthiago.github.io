@@ -1,0 +1,57 @@
+@import 'utils/design';
+
+//	Input : Compound - Styles
+
+.input-compound {
+	@include flex-row;
+
+	.input-compound-item {
+		@include flex-col;
+		flex-grow: 1;
+
+		label {
+			margin: 0;
+			align-self: flex-start;
+		}
+
+		.input-wrapper {
+			margin: 8px 0 16px;
+
+			input::placeholder {
+				color: #000;
+				font-size: 14px;
+			}
+		}
+
+		&:nth-of-type(1) {
+			margin-right: 12px;
+		}
+	}
+
+	.input-compound-opts {
+		@include flex-col;
+		padding: 4px 4px;
+		align-items: flex-start;
+
+		border: 1px solid $_light02;
+		background: $_white;
+		
+		position: absolute;
+		z-index: 24;
+		max-height: 240px !important;
+		overflow: hidden;
+		overflow-y: auto;
+
+		span {
+			width: 100%;
+			padding: 4px 12px;
+
+			&:hover {
+				@media (min-width:1024px) {
+					cursor: pointer;
+					background: $_light01;
+				}
+			}
+		}
+	}
+}

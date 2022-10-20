@@ -1,0 +1,117 @@
+@import 'utils/design';
+
+//	Input - Styles
+
+.input-wrapper {
+	@include flex-col;
+	margin: 12px 0;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	label {
+		margin: 0;
+
+		@include font-bold;
+		color: $_dark02;
+		font-size: 14px;
+		text-transform: capitalize;
+	}
+
+	input {
+		@include flex-row;
+		width: 100%;
+		margin: 0;
+		padding: 4px 12px;
+
+		align-items: flex-start;
+		justify-content: flex-start;
+
+		@include font-medium;
+		font-size: 14px;
+		color: $_black;
+
+		border: 1px solid $_light02;
+		background: $_white;
+		box-shadow: 0px 2px 8px #00000015;
+		border-radius: 4px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			@include font-medium;
+			font-size: 14px;
+			color: $_dark03;
+
+			align-self: start;
+			justify-self: start;
+		}
+	}
+
+	textarea {
+		@include flex-row;
+		width: 100%;
+		height: 64px;
+		margin: 0;
+		padding: 8px 12px;
+		resize: none;
+
+		align-items: flex-start;
+		justify-content: flex-start;
+
+		@include font-medium;
+		font-size: 14px;
+		color: $_black;
+
+		border: 1px solid $_light02;
+		background: $_white;
+		box-shadow: 0px 2px 8px #00000015;
+		border-radius: 4px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			@include font-medium;
+			font-size: 14px;
+			color: $_dark03;
+
+			align-self: start;
+			justify-self: start;
+		}
+	}
+
+	&.textarea input {
+		height: 64px;
+	}
+
+	.input-options-list {
+		.input-options-item {
+			@include flex-row;
+			margin: 4px;
+			align-items: flex-start;
+			justify-content: flex-start;
+
+			label {
+				color: $_dark04;
+				margin: 0 8px;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 18px;
+			}
+		}
+	}
+
+	/*
+	input[type=number] {
+		-moz-appearance:textfield; // Firefox
+
+		outer-spin-button,
+		inner-spin-button {
+			-webkit-appearance: none; // Chrome, Safari, Opera, Explorer
+			margin: 0;
+		}
+	}*/
+}

@@ -1,0 +1,60 @@
+@import 'utils/design';
+
+// --- Card - Styles --- //
+
+.card-wrapper {
+	width: 480px;
+	min-width: 480px;
+	margin: 36px 24px 0;
+
+	border: 1px solid $_light01;
+	border-radius: 4px;
+
+	.card-details {
+		padding: 16px 16px;
+		justify-content: space-evenly;
+
+		> .card-info {
+			width: 72%;
+			align-items: flex-start;
+
+			h2 {
+				color: $_dark01;
+				font-size: 18px;
+				margin-bottom: 12px;
+			}
+		
+			h3 {
+				color: $_dark03;
+				font-size: 14px;
+				font-weight: 500;
+				height: 48px;
+			}
+		}
+
+		> .svg-type {
+			width: 36px;
+			height: 32px;
+			margin: 0 16px;
+		}
+	}
+
+	.card-options {
+		width: 100%;
+		padding: 12px 0;
+		justify-content: space-evenly;
+		border-top: 1px solid $_light01;
+
+		button {
+			font-size: 14px;
+			font-weight: 500;
+			color: $_purple;
+
+			@media (min-width:768px) {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+// Food Delivery Design - Dimensions
+
+// ---- Flex Components ---- //
+
+	@mixin flex-col {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@mixin flex-row {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@mixin hover-cursor {
+		@media (min-width:768px) {
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+// ---- Flex Components ---- //
+
+
+// --------- Header --------- //
+
+	// - Mobile
+	$m_headerH: 8vh;
+	$m_headerW: 100vw;
+
+	// - Tablet
+	$t_headerH: 8vh;
+	$t_headerW: 100vw;
+
+	// - Desktop
+	$d_headerH: 9vh;
+	$d_headerW: 100vw;
+
+
+	// - OLD_Mobile
+	$mobile_headerHeight: 10vh;
+
+// --------- Header --------- //
+
+
+// --------- Footer --------- //
+
+	// - Mobile
+	$mobile_footerWidth: 100vw;
+	$mobile_footerHeight:  8vh;
+
+	// - Desktop
+	$desktop_footerWidth: 100vw;
+	$desktop_footerHeight: 10vh;
+
+// --------- Footer --------- //
+
+
+// --------- Content -------- //
+
+	// - Mobile
+	$mobile_contentWidth: 100vw;
+	$mobile_contentHeight: 90vh;
+
+	// - Desktop
+	$desktop_contentWidth: 100vw;
+	$desktop_contentHeight: 87vh;
+
+// --------- Content -------- //
+
+
+// ------- Responsive ------- //
+
+	// responsive-rule-model
+	// @media (max-width:2560px) {}
+
+	@mixin responsive {
+		@media (max-width:767px	) {
+			width: 100vw;
+		}
+
+		@media (min-width:768px	) {
+			width: 100vw;
+		}
+
+		@media (min-width:1440px) {
+			width: 100vw;
+		}
+
+		@media (min-width:1900px) {
+			width: 80vw;
+		}
+	}
+
+	@mixin r-flow($_type, $_width, $_flow) {
+		@media (#{$_type}-width:#{$_width}) {
+			flex-flow: $_flow !important;
+		}
+	}
+
+	@mixin r-width($_type, $_width, $_cwidth) {
+		@media (#{$_type}-width:#{$_width}) {
+			width: $_cwidth !important;
+		}
+	}
+
+	@mixin r-display($_type, $_width, $_display:none) {
+		@media (#{$_type}-width:#{$_width}) {
+			display: $_display !important;
+		}
+	}
+
+	@mixin r-custom($_type, $_width, $_field, $_value) {
+		@media (#{$_type}-width:#{$_width}) {
+			#{$_field}: $_value !important;
+		}
+	}
+
+// ------- Responsive ------- //

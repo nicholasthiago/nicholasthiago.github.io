@@ -1,0 +1,63 @@
+@import './colors.scss';
+// Food Delivery - Effects
+
+// ---   Basic Effects 	----- //
+
+@keyframes opacityControl {
+	0%    { opacity: 0.0 }
+	100%  { opacity: 1.0 }
+}
+
+// ---   Move  Effects 	----- //
+
+@keyframes fromCenter {
+	from { transform: scale(0.1) }
+	to   { transform: scale(1.0) }
+}
+
+@keyframes fromTop {
+	from { transform: translateY(90vh) }
+	to   { transform: translateY( 0vh) }
+}
+
+@keyframes fromSides {
+	from { transform: translateX(90vw) }
+	to   { transform: translateX( 0vw) }
+}
+
+// ---   Size  Effects 	----- //
+
+@keyframes sizeWidth {
+	from { width  :	0vw		; }
+	to   { width  :	unset	; }
+}
+
+@keyframes sizeHeight {
+	from { height :	0vh		; }
+	to   { height :	unset	; }
+}
+
+// --- Rotation Effects ----- //
+
+@keyframes rotate90 {
+	from { transform: rotate(  0deg) }
+	to   { transform: rotate( 90deg) }
+}
+
+@keyframes rotate180 {
+	from { transform: rotate(  0deg) }
+	to   { transform: rotate(180deg) }
+}
+
+// ---  Loading Effects  ---- //
+
+@keyframes loadingFx {
+
+	0%	 { transform: scale( 1.0 ) rotateX(   0deg ) }
+	25%	 { transform: scale( 0.6 ) rotateX(   0deg ) }
+	50%	 { transform: scale( 1.2 ) rotateX( 180deg ) }
+	75%	 { transform: scale( 0.6 ) rotateX( 180deg ) }
+	100% { transform: scale( 1.0 ) rotateX(   0deg ) }
+}
+
+// -------------------------- //

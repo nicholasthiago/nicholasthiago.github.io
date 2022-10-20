@@ -1,0 +1,213 @@
+@import 'utils/design';
+
+// --- OLD : Loading Component --- //
+
+.loading-component {
+	font-size: 14px;
+	font-weight: 600;
+	transition: 0.3s;
+	background: linear-gradient(to right, $_blue, $_white);
+	background-clip: text;
+
+	animation: loadingText 0.3s infinite;
+}
+
+
+// --- Loading Component 01 --- //
+
+	$_width01: 144px;
+	$_width02: calc(  #{$_width01} / 2 );
+	$_width03: calc( -#{$_width01} / 2 );
+
+	$_color01: $_light02;
+	$_color02: $_dark02;
+	$_color03: $_dark03;
+	$_color04: $_dark01;
+
+	.loading-wrapper {
+		width:  $_width01;
+		height: $_width01;
+		margin: $_width01 auto;
+		position: relative;
+		transform-style: preserve-3d;
+		animation: turn 4s linear infinite;
+		transition: 0.5s;
+	}
+
+
+	.square {
+		width:  $_width01;
+		height: $_width01;
+		position:absolute;
+		opacity: 1;
+		border: solid 5px;
+		box-sizing: border-box;
+		transition:0.5s;
+		animation: color 4s linear infinite;
+	}
+
+
+	.loading-wrapper:hover .square {
+		animation: color 4s linear infinite;
+	}
+
+	.square:nth-child(1) {
+		background-color:$_color01;
+		z-index:6;
+		transform: translateZ($_width02); 
+	}
+	.square:nth-child(2) {
+		background-color: $_color01;
+		z-index: 5 ;
+		transform: translateX($_width02) rotateY(90deg);
+	}
+	.square:nth-child(3) {
+		background-color: $_color01;
+		z-index:4;
+		//transform: translate(-$_width02) rotateY(-90deg);
+		transform: translate($_width03) rotateY(-90deg);
+	}
+	.square:nth-child(4) {
+		background-color: $_color01;
+		z-index:4;
+		//transform: translateZ(-$_width02);
+		transform: translateZ($_width03);
+	}
+	.square:nth-child(5) {
+		background-color: $_color01;
+		//transform: translateY(-$_width02) rotateX(90deg);
+		transform: translateY($_width03) rotateX(90deg);
+	}
+	.square:nth-child(6) {
+		background-color: $_color01;
+		transform: translateY($_width02) rotateX(-90deg);
+	}
+
+
+	@keyframes turn {
+		from {
+			transform: rotateY(0) rotateX(0) ;
+		}
+		to {
+			transform: rotateY(360deg) rotateX(360deg) ;
+		}
+	}
+
+	@keyframes color {
+		from {
+			//border: solid 25px $_color02;
+			border: solid $_width02 $_color02;
+			opacity:.3;
+		}
+		
+		30%{
+			border: solid 5px $_color02;
+			opacity:.3;
+		}
+		
+		45% {
+			//border: solid 25px $_color03;
+			border: solid $_width02 $_color03;
+			opacity:.3;
+		}
+		
+		60%{
+			border: solid 5px $_color04;
+			opacity:.3;
+		}
+		
+		75% {
+			//border: solid 25px $_color04;
+			border: solid $_width02 $_color04;
+			opacity:.3;
+		}
+		
+		90%{
+			border: solid 5px $_color03;
+			opacity:.3;
+		}
+		
+		to{
+			//border: solid 25px $_color02;
+			border: solid $_width02 $_color02;
+			opacity:.3;
+		}
+	}
+
+// --- Loading Component 01 --- //
+
+// --- Loading Component 02 --- //
+
+	#preloader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	#loader {
+		display: block;
+		position: relative;
+		left: 50%;
+		top: 50%;
+		width: 150px;
+		height: 150px;
+		margin: -75px 0 0 -75px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #1754B0;
+		-webkit-animation: spin 2s linear infinite;
+		animation: spin 2s linear infinite;
+	}
+	#loader:before {
+		content: "";
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: $_primary;
+		-webkit-animation: spin 3s linear infinite;
+		animation: spin 3s linear infinite;
+	}
+	#loader:after {
+		content: "";
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		right: 15px;
+		bottom: 15px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #1754B0;
+		-webkit-animation: spin 1.5s linear infinite;
+		animation: spin 1.5s linear infinite;
+	}
+	@-webkit-keyframes spin {
+		0%   {
+			-webkit-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+	@keyframes spin {
+		0%   {
+			-webkit-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+
+// --- Loading Component 02 --- //

@@ -1,0 +1,81 @@
+@import 'utils/design';
+
+// --- Item List - Styles --- //
+
+$_txt01: $_dark01;
+$_txt02: $_dark02;
+$_txt03: $_dark03;
+
+$_bgd01: $_light01;
+
+
+.item-list {
+	width: 80vw;
+	padding: 24px 0 24px;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	.list-item {
+		@include hover-cursor;
+		margin: 0 0 16px;
+		//width: 24%;
+		//background: $_bgd01;
+		//border: 1px solid red;
+
+		img {
+			max-width: 100%;
+			max-height: 144px;
+		}
+
+		.img-error {
+			@include flex-col;
+			width: 100%;
+			height: auto;
+
+			h3 {
+				width: 8lh;
+				margin: 20% 0;
+
+				font-size: 16px;
+				text-align: center;
+				color: $_dark03;
+			}
+		}
+
+		.list-item-title {
+			h2 {
+				color: $_txt01;
+				width: 84%;
+				margin: 8px 0 8px;
+				font-size: 14px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+
+		.list-item-description {
+			width: 96%;
+
+			h3 {
+				color: $_txt02;
+				margin: 0 0 8px;
+				font-size: 12px;
+				font-weight: 450;
+				text-align: center;
+			}
+		}
+
+		.list-item-tags {
+			display: none;
+
+			h4 {
+				color: $_txt03;
+				margin: 0 0 16px;
+				font-size: 12px;
+			}
+		}
+	}
+}

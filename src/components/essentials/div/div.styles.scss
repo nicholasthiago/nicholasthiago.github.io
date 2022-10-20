@@ -1,0 +1,18 @@
+@import 'utils/design';
+
+//	Custom Div - Styles
+
+.div-component {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&.div-row {
+		flex-flow: row;
+	}
+
+	&.div-col {
+		flex-flow: column;
+		justify-content: flex-start;
+	}
+}

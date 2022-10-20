@@ -1,0 +1,54 @@
+@import 'utils/design';
+
+//	Table Options - Styles
+
+.options-wrapper {
+	@include flex-col;
+	margin: 4px 0px;
+
+	.options-button {
+		color: $_white;
+		padding: 8px 24px;
+		font-weight: 500;
+		
+		background: $_purple;
+		border-radius: 4px;
+		
+		&.disabled {
+			background: $_light04;
+		}
+	}
+
+	.options-menu {
+		@include flex-col;
+		width: 96px;
+		margin: 9.6em 0 0;
+		padding: 2px 2px;
+		position: absolute;
+
+		border-radius: 4px;
+		background: $_light01;
+		border: 1px solid $_light02;
+		box-shadow: 0px 4px 8px #33333316;
+
+		animation:
+			opacityControl	0.3s,
+			fromCenter		0.1s;
+
+		h3 {
+			font-family: 'Roboto', sans-serif !important;
+			width: 96px;
+			font-size: 14px;
+			padding: 8px 16px;
+			color: $_dark02;
+			transition: 0.3s;
+
+			@media (min-width:1024px) {
+				&:hover {
+					color: $_dark02;
+					background: #5C4DFF20;
+				}
+			}
+		}
+	}
+}

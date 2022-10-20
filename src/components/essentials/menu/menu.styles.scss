@@ -1,0 +1,72 @@
+@import 'utils/design';
+
+// component : menu [ responsive behavior ]
+
+.component-menu-wrapper {
+	width: 100%;
+
+	.component-menu {
+
+		.menu-title,.menu-item {
+			.svg-type {
+				min-width:  24px;
+				max-width:  24px;
+				min-height: 24px;
+				max-height: 24px;
+			}
+		}
+
+		.dropdown-menu {
+			@include flex-col;
+			background: $_white;
+			padding: 8px 4px;
+			position: fixed;
+			top: $m_headerH;
+
+			animation: 0.3s opacityControl;
+			box-shadow: 0px 8px 12px 0px #33333325;
+
+			button {
+				width: 90%;
+				color: $_dark02;
+				margin: 1px 24px;
+
+				@include hover-cursor;
+
+				@media (min-width:768px) {
+					&:hover {
+						background: $_light03;
+					}
+				}
+			}
+		}
+	}
+
+	.theme-light {
+		* {
+			color: $_black;
+
+			svg > path {
+				fill: $_black;
+			}
+
+			.dropdown-menu {
+				background: $_white;
+			}
+		}
+	}
+
+	.theme-dark  {
+		* {
+			color: $_white;
+
+			svg > path {
+				fill: $_white;
+			}
+
+			.dropdown-menu {
+				background: $_black;
+			}
+		}
+	}
+}

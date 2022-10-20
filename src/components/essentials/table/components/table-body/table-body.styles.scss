@@ -1,0 +1,87 @@
+@import 'utils/design';
+
+//	Table Body - Styles
+
+.table-wrapper {
+	max-width: 90%;
+	overflow: auto;
+
+	table {
+		margin: 16px 0;
+		align-self: flex-start;
+		* { font-size: 14px; }
+
+		tr {
+			transition: 0.4s;
+
+			&.selected-row {
+				background: #0582F036 !important;
+			}
+
+			@media (min-width:1024px) {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			th,td {
+				padding: 12px 16px;
+				overflow: hidden;
+				max-width: 50vw;
+				white-space: pre;
+
+				.bool-true {
+					width: 12px;
+					height: 12px;
+					background: $_green;
+					border-radius: 50px;
+					box-shadow: 0px 0px 4px $_green;
+				}
+
+				.bool-false {
+					width: 12px;
+					height: 12px;
+					background: $_red;
+					border-radius: 50px;
+					box-shadow: 0px 0px 4px $_red;
+				}
+
+				.table-checkbox,
+				.table-checkbox-all {
+					@include flex-row;
+					min-width: 16px;
+					max-width: 16px;
+					min-height: 16px;
+					max-height: 16px;
+
+					transition: 0.2s;
+					border-radius: 4px;
+					border: 1px solid $_dark04;
+				}
+			}
+		}
+
+		td {
+			color: $_dark02;
+			font-weight: 500;
+		}
+
+		&.border {
+			th,td {
+				border: 1px solid $_light03;
+			}
+		}
+
+		&.strips {
+
+			tr.row-ying {
+				background: $_white;
+			}
+	
+			tr.row-yang {
+				//background: #0582F016;
+				background: $_light01;
+			}
+		}
+	}
+}

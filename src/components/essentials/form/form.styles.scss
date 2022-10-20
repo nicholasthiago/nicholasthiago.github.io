@@ -1,0 +1,7 @@
+@import 'utils/design';
+
+//	Form Component - Styles
+
+.form-wrapper {
+	@include flex-col;
+}
