@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.scss';
 import App from 'app/App';
+import { BrowserRouter as Router } from "react-router-dom";
+
 import reportWebVitals from 'tests/reportWebVitals';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+	document.getElementById('root') as HTMLElement
 );
 
-root.render( <App /> );
+root.render(
+	<Router>
+		<App />
+	</Router>
+);
 
 
 reportWebVitals();

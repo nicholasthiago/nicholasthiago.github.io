@@ -1,0 +1,15 @@
+@import 'utils/design';
+
+.page-menu {
+	@include flex-row;
+	padding:	1em 4vw;
+	height:		8vh;
+	width:		100vw;
+	gap: 1em;
+
+	border: 1px solid red;
+
+	@media ( width:768px ) {
+
+	}
+}

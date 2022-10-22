@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.scss';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router';
+// import { Route } from "react-router-dom";
 
+import Menu		from 'components/menu';
 import Home		from 'pages/home';
 import About	from 'pages/about';
 
@@ -10,13 +12,14 @@ import About	from 'pages/about';
 const App = () => (
 	<div className="App">
 
-		<header className="App-header">
-		</header>
+		<Menu />
 
-		<Router>
-			<Route path={'/'	 }> <Home	/>	</Route>
-			<Route path={'/about'}> <About	/>	</Route>
-		</Router>
+		<Routes>
+
+			<Route path={'/'	 } element={ <Home />	} />
+			<Route path={'/about'} element={ <About />	} />
+
+		</Routes>
 
 	</div>
 );

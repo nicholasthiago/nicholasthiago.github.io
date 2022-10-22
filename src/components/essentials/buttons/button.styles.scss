@@ -4,12 +4,12 @@ button {
 	border: none;
 	max-width: 100%;
 	max-height: 100%;
-	background: none;
+	// background: none;
 
 	padding: 8px 24px;
 
 	&:focus {
-		outline: none;
+		outline: none !important;
 	}
 
 	&:hover {
