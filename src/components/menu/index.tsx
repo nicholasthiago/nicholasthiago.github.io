@@ -4,7 +4,6 @@ import './style.scss';
 
 import Button from 'react-bootstrap/Button';
 
-
 interface MenuRef {
 	home	: MenuItemRef;
 	about	: MenuItemRef;
@@ -50,6 +49,7 @@ const menuConstructor = ( ref: MenuRef ) =>
 		);
 	});
 
+
 const Menu = () => {
 	return (
 		<div className={'page-menu'}>
@@ -57,5 +57,6 @@ const Menu = () => {
 		</div>
 	);
 };
+
 
 export default ( Menu );
