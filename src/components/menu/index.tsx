@@ -2,49 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-import Button from 'react-bootstrap/Button';
 
-interface MenuRef {
-	home	: MenuItemRef;
-	about	: MenuItemRef;
-	projs	: MenuItemRef;
-	profs	: MenuItemRef;
-}
-interface MenuItemRef {
-	title	: String;
-	route	: String;
-};
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
-const menu_ref: MenuRef = {
-	home	: {
-		title: 'Home'		,
-		route: '/'			,
-	},
-	about	: {
-		title: 'About'		,
-		route: '/about'		,
-	},
-	projs	: {
-		title: 'Projects'	,
-		route: '/projects'	,
-	},
-	profs	: {
-		title: 'Profiles'	,
-		route: '/profiles'	,
-	},
-};
+import { MenuRef, menu_ref } from './reference';
 
+
+// Menu builder, using menu_ref as main reference
 const menuConstructor = ( ref: MenuRef ) =>
 	Object.values( ref ).map( ( option, i ) => {
 		return (
-			<Link key={ i } to={ option.route }> 
-				<Button
-					variant={'outline-primary'}
+			<Link to={ option.route }>
+				<Nav.Link
 					className={ `menu-item-${ option.title }` }
 					onMouseDown={ () => console.log( option.route ) }
 				>
-					{ option.title }
-				</Button>
+						{ option.title }
+				</Nav.Link>
 			</Link>
 		);
 	});
@@ -52,11 +28,26 @@ const menuConstructor = ( ref: MenuRef ) =>
 
 const Menu = () => {
 	return (
-		<div className={'page-menu'}>
-			{ menuConstructor( menu_ref ) }
-		</div>
+		<Navbar className={'page-menu'}
+			bg={"light"}
+			expand={'lg'} 
+			fixed={( window.innerWidth > 768 ) ? 'top' : 'bottom' }>
+			<Container>
+
+				<Navbar.Brand href="/"> {'Welcome'} </Navbar.Brand>
+
+				<Navbar.Toggle aria-controls={"basic-navbar-nav"} />
+
+				<Navbar.Collapse id={"basic-navbar-nav"}>
+					<Nav className={"me-auto"}>
+						{ menuConstructor( menu_ref ) }
+					</Nav>
+				</Navbar.Collapse>
+
+			</Container>
+		</Navbar>
 	);
-};
+}
 
 
 export default ( Menu );
