@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": "src",
 		"target": "es5",
+		"types": ["node"],
 		"lib": [
 			"dom",
 			"dom.iterable",
@@ -21,5 +22,7 @@
 		"noEmit": true,
 		"jsx": "react-jsx"
 	},
-	"include": ["src"]
+	"include": [
+		"src"
+	]
 }

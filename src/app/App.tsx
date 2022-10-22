@@ -4,7 +4,7 @@ import './App.scss';
 import { Routes, Route } from 'react-router';
 // import { Route } from "react-router-dom";
 
-import Menu		from 'components/menu';
+import Menu		from 'components/menu/menu.component';
 import Home		from 'pages/home';
 import About	from 'pages/about';
 
