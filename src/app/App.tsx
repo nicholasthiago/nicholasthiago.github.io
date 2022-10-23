@@ -1,27 +1,28 @@
 import React from 'react';
 import './App.scss';
-
 import { Routes, Route } from 'react-router';
-// import { Route } from "react-router-dom";
-
 import Menu		from 'components/menu/menu.component';
+
 import Home		from 'pages/home';
 import About	from 'pages/about';
 
 
-const App = () => (
-	<div className="App">
+const App = () => {
 
-		<Menu />
+	return (
+		<div className={'App'}>
 
-		<Routes>
+			<Menu />
 
-			<Route path={'/'	 } element={ <Home />	} />
-			<Route path={'/about'} element={ <About />	} />
+			<Routes>
 
-		</Routes>
+				<Route path={'/'	 } element={ <Home />	} />
+				<Route path={'/about'} element={ <About />	} />
 
-	</div>
-);
+			</Routes>
+
+		</div>
+	);
+};
 
 export default App;

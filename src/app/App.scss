@@ -1,39 +1,38 @@
+@import 'utils/design';
+
 .App {
-	text-align: center;
-}
+	text-align: center	;
+	margin: 64px 0 0	;
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
+	.menu-switch {
+		max-width: 20vw		;
+		align-self: center	;
 
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
+		.form-check-input {
 
-.App-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
-}
+			&:checked {
+				background-color: var( --bs-gray-700 )	;
+				border-color	: var( --bs-gray-700 )	;
+				background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%280, 0, 0, 0.25%29%27/%3e%3c/svg%3e");
+			}
 
-.App-link {
-	color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
+			&:focus {
+				border-color: rgba(0, 0, 0, 0.55);
+				box-shadow: none;
+				background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%273%27 fill=%27rgba%280, 0, 0, 0.25%29%27/%3e%3c/svg%3e");
+			}
+		}
 	}
 
-	to {
-		transform: rotate(360deg);
+	.bg-light {
+		label {
+			color: rgba(0, 0, 0, 0.55) !important;
+		}
+	}
+
+	.bg-dark {
+		label {
+			color: rgba(256, 256, 256, 0.55) !important;
+		}
 	}
 }

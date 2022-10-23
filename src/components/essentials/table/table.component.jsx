@@ -318,7 +318,6 @@ class Table extends React.Component {
 		);
 	};
 
-
 	async componentDidMount (show,pagination) {
 		let self = this;
 		let { src } = this.props;

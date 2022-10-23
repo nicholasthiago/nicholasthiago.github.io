@@ -1,20 +1,21 @@
 import React from 'react';
-import './style.scss';
 
-
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
+import {
+	Nav			,
+	Form		,
+	Navbar		,
+	Container,	} from 'react-bootstrap';
 import { LinkContainer as Link } from 'react-router-bootstrap';
 
-import { MenuRef, menu_ref } from './reference';
+import { useToggle } from 'hooks/hooks';
+import { MenuProps, MenuRef, menu_ref } from './reference';
 
 
 // Menu builder, using menu_ref as main reference
 const menuConstructor = ( ref: MenuRef ) =>
 	Object.values( ref ).map( ( option, i ) => {
 		return (
-			<Link to={ option.route }>
+			<Link to={ option.route } key={ i }>
 				<Nav.Link href={ option.route }
 					className={ `menu-item-${ option.title }` }
 					onMouseDown={ () => console.log( option.route ) }
@@ -26,12 +27,16 @@ const menuConstructor = ( ref: MenuRef ) =>
 	});
 
 
-const Menu = () => {
+const Menu = ({ dark = false } : MenuProps ) => {
+
+	const [ theme, toggleTheme ] = useToggle( dark );
+
 	return (
 		<Navbar className={'page-menu'}
-			bg={"light"}
+			fixed={'top'}
 			expand={'lg'} 
-			fixed={( window.innerWidth > 768 ) ? 'top' : 'bottom' }
+			bg={ ( theme ) ? 'dark' : 'light' }
+			variant={ ( theme ) ? 'dark' : 'light' }
 		>
 			<Container>
 
@@ -39,18 +44,29 @@ const Menu = () => {
 					<Navbar.Brand> {'Welcome'} </Navbar.Brand>
 				</Link>
 
+				
+
 				<Navbar.Toggle aria-controls={"basic-navbar-nav"} />
 
 				<Navbar.Collapse id={"basic-navbar-nav"}>
 					<Nav className={"me-auto"}>
+						
 						{ menuConstructor( menu_ref ) }
+
+						<Form.Check
+							onMouseDown={ () => toggleTheme() }
+							className={'menu-switch'}
+							type={'switch'}
+							label={'Theme'}	
+						/>
+
 					</Nav>
 				</Navbar.Collapse>
 
 			</Container>
 		</Navbar>
 	);
-}
+};
 
 
 export default ( Menu );
