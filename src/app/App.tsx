@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.scss';
 import { Routes, Route } from 'react-router';
+import './App.scss';
+
 import Menu		from 'components/menu/menu.component';
 
-import Home		from 'pages/home';
-import About	from 'pages/about';
+import Home		from 'pages/home/home.page';
+import About	from 'pages/about/about.page';
 
 
 const App = () => {
@@ -25,4 +26,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default ( App );

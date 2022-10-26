@@ -4,10 +4,25 @@
 	text-align: center	;
 	margin: 64px 0 0	;
 
+	// remove outline bootstrap effect
+	* :focus {
+		outline: none;
+		box-shadow: none;
+	}
+
 	.menu-switch {
 		max-width: 20vw		;
 		align-self: center	;
 
+		// fixes theme switch button transition effects
+		* {
+			transition:
+				color 				0.15s ease-in-out	,
+				border-color		0.15s ease-in-out	,
+				background-color	0.15s ease-in-out	;
+		}
+
+		// fixes theme switch button colors during effects
 		.form-check-input {
 
 			&:checked {
@@ -24,6 +39,7 @@
 		}
 	}
 
+	// fixes label text colors for both light and dark themes
 	.bg-light {
 		label {
 			color: rgba(0, 0, 0, 0.55) !important;

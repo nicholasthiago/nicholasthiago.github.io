@@ -1,5 +1,17 @@
-@import 'utils/design';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "~bootstrap/scss/bootstrap";
+@import 'utils/design';
+
+/*
+$theme-colors: (
+    "light"	: #F4F4F4	,
+    "dark"	: teal		,
+);
+*/
+
 
 body {
 	margin: 0;
@@ -11,9 +23,4 @@ body {
 		max-width: 100%;
 		max-height: 100%;
 	}
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
 }

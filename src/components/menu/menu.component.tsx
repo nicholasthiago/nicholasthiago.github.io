@@ -8,10 +8,10 @@ import {
 import { LinkContainer as Link } from 'react-router-bootstrap';
 
 import { useToggle } from 'hooks/hooks';
-import { MenuProps, MenuRef, menu_ref } from './reference';
+import { MenuProps, MenuRef, menu_ref } from './menu.reference';
 
 
-// Menu builder, using menu_ref as main reference
+// Menu builder : using menu_ref as main reference
 const menuConstructor = ( ref: MenuRef ) =>
 	Object.values( ref ).map( ( option, i ) => {
 		return (
@@ -43,8 +43,6 @@ const Menu = ({ dark = false } : MenuProps ) => {
 				<Link to={'/'}>
 					<Navbar.Brand> {'Welcome'} </Navbar.Brand>
 				</Link>
-
-				
 
 				<Navbar.Toggle aria-controls={"basic-navbar-nav"} />
 
