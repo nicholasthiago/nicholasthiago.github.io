@@ -1,20 +1,9 @@
-
-export interface MenuItemRef {
-	title	: String	;
-	route	: String	;
-};
-
 // Type declaration for Menu and Menu items
-export interface MenuRef {
-	home	: MenuItemRef	;
-	about	: MenuItemRef	;
-	projs	: MenuItemRef	;
-	profs	: MenuItemRef	;
-};
+import { MenuRef } from "types/types";
 
 // Menu component : props reference
 export interface MenuProps {
-	dark?	: Boolean		;
+	dark?	: boolean		;
 }
 
 // Menu Reference

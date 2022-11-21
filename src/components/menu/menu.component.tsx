@@ -1,14 +1,13 @@
-import React from 'react';
-
 import {
 	Nav			,
 	Form		,
 	Navbar		,
 	Container,	} from 'react-bootstrap';
+import { useToggle } from 'hooks/hooks';
 import { LinkContainer as Link } from 'react-router-bootstrap';
 
-import { useToggle } from 'hooks/hooks';
-import { MenuProps, MenuRef, menu_ref } from './menu.reference';
+import { MenuRef } from 'types/types';
+import { MenuProps, menu_ref } from './reference';
 
 
 // Menu builder : using menu_ref as main reference
