@@ -28,16 +28,14 @@ const ProjectItem = ({ project }: Props ) => {
 	};
 
 	return (
-		<Container className={'project-item tw-flex tw-flex-col tw-gap-3'}>
+		<Container className={'project-item tw-flex tw-flex-col tw-items-center tw-gap-3'}>
 
 			<Image src={ FinanceThumb }
-				className={'tw-rounded-lg'}
+				className={'tw-rounded-lg tw-max-w-screen-md tw-max-h-screen-md'}
 				style={{ scale:'0.8', marginBottom:'-3.5rem', border:'1.5px solid #DDD'}}
 			/>
 
 			<h4 className={'project-title tw-text-xl tw-text-gray-700'}> { project.title } </h4>
-
-			<h6 className={'project-about tw-text-base tw-text-gray-500'}> { project.about } </h6>
 
 			<div className={'project-langs tw-flex tw-flex-row tw-justify-center tw-gap-2'}>
 			{	( project.langs ).map( ( lang, i ) => {
@@ -46,14 +44,26 @@ const ProjectItem = ({ project }: Props ) => {
 						className={'tw-py-2 tw-px-3 tw-font-medium tw-text-sm tw-rounded tw-text-slate-'} 
 					> { lang } </span>
 				})
-			}
-			</div>
+			} </div>
 
-			<Link to={ project.link }>
-				<Button className={'project-redirect tw-bg-slate-400 tw-border-slate-400 tw-font-medium'}>
+			<h6 className={'project-about tw-text-base tw-text-gray-500 tw-max-w-screen-md tw-text-start'}> { project.about } </h6>
+
+			<div className={'project-links tw-flex tw-flex-row tw-gap-3'}>
+				<Button
+					className={'project-redirect tw-bg-slate-400 tw-border-slate-400 tw-font-medium'}
+					onMouseDown={ () => window.location.href = 'https://nicholasthiago.github.io' + project.link }	
+				>
 					{'Visit Project'}
 				</Button>
-			</Link>
+
+				<Button
+					className={'project-redirect tw-bg-gray-800 tw-border-gray-800 tw-font-medium'}
+					onMouseDown={ () => window.location.href = 'https://github.com/nicholasthiago' + project.link }
+				>
+					{'Code on GitHub'}
+				</Button>
+			</div>
+
 		</Container>
 	);
 };

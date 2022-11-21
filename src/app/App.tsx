@@ -11,7 +11,7 @@ import Projects	from 'pages/projects/projects.page';
 const App = () => {
 
 	return (
-		<div className={'App'}>
+		<div className={'App tw-mb-9'}>
 
 			<Menu />
 
