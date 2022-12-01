@@ -1,0 +1,55 @@
+@import 'styles/design';
+
+.home-intro {
+	margin: 1rem 0 0;
+
+	> div {
+		width: 75%;
+		margin: 0 auto 2rem;
+
+		&.home-actions {
+			> button {
+				font-weight: 600;
+				flex: 1;
+			}
+
+			> .act-hire {
+				@include setColor( #f97316, #f8fafc, #f97316 );
+				@include setHover( #fb923c, #f8fafc, #f97316 );
+			}
+			> .act-proj {
+				@include setColor( #f8fafc, #475569, #cbd5e100 );
+				@include setHover( #f8fafc, #334155, #475569 );
+			}
+		}
+
+		&.home-skills {
+			.dropdown {
+				@include flex-col;
+				align-items: flex-start;
+
+				.dropdown-toggle {
+					width: 48%;
+					// text-align: start;
+				}
+
+				.dropdown-menu {
+					max-height: fit-content;
+	
+					.dropdown-item {
+						padding: 0.25rem 0.50rem;
+	
+						> span {
+							padding: 0.3rem 0.75rem;
+							transform: scale(0.9);
+						}
+	
+						&:hover	 { background: #f1f5f9 }
+					}
+				}
+			}
+
+			
+		}
+	}
+}

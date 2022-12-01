@@ -41,3 +41,27 @@
 	$sh-03	: #00000032	;
 
 // --------- roduct Manager - Colors -------- //
+
+// sets Background, text Color and Border
+@mixin setColor (
+	$backg	: #f1f5f9,
+	$color	: #1e293b,
+	$border	: #f1f5f9,
+) {
+	background	: $backg	;
+	color		: $color	;
+	border		: 1px solid $border	;
+}
+
+// setColor function, for :hover
+@mixin setHover (
+	$backg	: #f1f5f9,
+	$color	: #1e293b,
+	$border	: #f1f5f9,
+) {
+	&:hover {
+		background	: $backg	;
+		color		: $color	;
+		border		: 1px solid $border	;
+	}
+}

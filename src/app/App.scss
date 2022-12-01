@@ -1,8 +1,8 @@
-@import 'utils/design';
+@import 'styles/design';
 
 .App {
 	text-align: center	;
-	margin: 64px 0 0	;
+	margin: 3.5rem 0 0	;
 
 	// remove outline bootstrap effect
 	* :focus {

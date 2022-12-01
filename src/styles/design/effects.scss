@@ -60,4 +60,38 @@
 	100% { transform: scale( 1.0 ) rotateX(   0deg ) }
 }
 
+// ---  Hover / Active Effects  ---- //
+
+@mixin color-fx (
+	$color1		: none		,
+	$color2		: none		,
+	$border1	: #FFFFFF00	,
+	$border2	: #FFFFFF00	,
+) {
+	color: $color1;
+	border-bottom: 1px solid $border1;
+
+	&:hover {
+		color: $color2;
+		border-bottom: 1px solid $border2;
+	}
+
+	&.active {
+		color: $color2;
+		border-bottom: 1px solid $border2;
+	}
+}
+
+@mixin bg-fx ( $bg1: none, $bg2: none ) {
+	background: $bg;
+
+	&:hover {
+		background: $bg2;
+	}
+
+	&.active {
+		background: $bg2;
+	}
+}
+
 // -------------------------- //

@@ -1,9 +1,10 @@
 import {
 	Nav			,
-	Form		,
 	Navbar		,
-	Container,	} from 'react-bootstrap';
-import { useToggle } from 'hooks/hooks';
+	Button		,
+	Container	,
+} from 'react-bootstrap';
+import './menu.styles.scss';
 import { LinkContainer as Link } from 'react-router-bootstrap';
 
 import { MenuRef } from 'types/types';
@@ -27,38 +28,40 @@ const menuConstructor = ( ref: MenuRef ) =>
 
 
 const Menu = ({ dark = false } : MenuProps ) => {
-
-	const [ theme, toggleTheme ] = useToggle( dark );
-
 	return (
 		<Navbar className={'page-menu'}
+			bg={'light'}
 			fixed={'top'}
-			expand={'lg'} 
-			bg={ ( theme ) ? 'dark' : 'light' }
-			variant={ ( theme ) ? 'dark' : 'light' }
+			expand={'sm'}
+			variant={'light'}
 		>
 			<Container>
 
 				<Link to={'/'}>
-					<Navbar.Brand> {'Welcome'} </Navbar.Brand>
+					<Navbar.Brand> {'Nicholas Thiago'} </Navbar.Brand>
 				</Link>
 
 				<Navbar.Toggle aria-controls={"basic-navbar-nav"} />
 
 				<Navbar.Collapse id={"basic-navbar-nav"}>
-					<Nav className={"me-auto"}>
+					<Nav className={""}>
 						
 						{ menuConstructor( menu_ref ) }
 
-						<Form.Check
-							onMouseDown={ () => toggleTheme() }
-							className={'menu-switch'}
-							type={'switch'}
-							label={'Theme'}	
-						/>
+						{/*
+							<Form.Check
+								onMouseDown={ () => toggleTheme() }
+								className={'menu-switch'}
+								type={'switch'}
+							/>
+						*/}
 
 					</Nav>
 				</Navbar.Collapse>
+
+				<Link className={'menu-contact'} to={'/contact'}>
+					<Button> {"Let's chat"} </Button>
+				</Link>
 
 			</Container>
 		</Navbar>

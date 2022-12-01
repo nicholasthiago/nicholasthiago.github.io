@@ -1,0 +1,11 @@
+@import 'styles/design';
+
+.dropdown {
+
+	> button.dropdown-toggle {
+		font-weight: 600;
+
+		@include setColor( #f8fafc, #475569, #cbd5e1 );
+		@include setHover( #f8fafc, #334155, #475569 );
+	}
+}

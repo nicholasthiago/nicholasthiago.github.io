@@ -1,0 +1,65 @@
+@import 'styles/design';
+
+.page-menu {
+	@include flex-row;
+	background: #FFF !important;
+	box-shadow: 0px 0px 4px 2px #33333316;
+	* { font-weight: 600 }
+
+	> .container {
+		@include flex-row;
+		flex-grow: 1;
+		justify-content: space-between !important;
+
+		@media ( width < 768px ) {
+			margin: auto 1rem;
+			justify-content: space-between !important;
+
+			> .navbar-collapse {
+				width: 50%;
+				flex: 3;
+			}
+
+			> .menu-contact {
+				margin-left: 1rem;
+				flex: 1;
+			}
+		}
+
+		> .menu-contact {
+			@include setColor( #f8fafc, #475569, #cbd5e1 );
+			@include setHover( #f8fafc, #1e293b, #334155 );
+			white-space: nowrap;
+
+			&:active {
+				color: #444;
+				background: #FFF;
+				border: 1px solid #999;
+			}
+		}
+
+		.navbar-collapse {
+			margin: 0;
+			flex-grow: 0;
+			justify-content: flex-end !important;
+
+			.navbar-nav {
+				> a {
+					@include color-fx( #444, #444, #FFF, #444 );
+					/*
+						color: #444;
+						border-bottom: 1px solid #FFF;
+
+						&:hover {
+							border-bottom: 1px solid #444;
+						}
+
+						&.active {
+							border-bottom: 1px solid #444;
+						}
+					*/
+				}
+			}
+		}
+	}
+}
