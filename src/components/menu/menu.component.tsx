@@ -32,7 +32,7 @@ const Menu = ({ dark = false } : MenuProps ) => {
 		<Navbar className={'page-menu'}
 			bg={'light'}
 			fixed={'top'}
-			expand={'sm'}
+			expand={'md'}
 			variant={'light'}
 		>
 			<Container>
@@ -43,25 +43,15 @@ const Menu = ({ dark = false } : MenuProps ) => {
 
 				<Navbar.Toggle aria-controls={"basic-navbar-nav"} />
 
-				<Navbar.Collapse id={"basic-navbar-nav"}>
-					<Nav className={""}>
-						
-						{ menuConstructor( menu_ref ) }
-
-						{/*
-							<Form.Check
-								onMouseDown={ () => toggleTheme() }
-								className={'menu-switch'}
-								type={'switch'}
-							/>
-						*/}
-
-					</Nav>
-				</Navbar.Collapse>
-
 				<Link className={'menu-contact'} to={'/contact'}>
 					<Button> {"Let's chat"} </Button>
 				</Link>
+
+				<Navbar.Collapse id={"basic-navbar-nav"}>
+					<Nav className={"me-auto"}>
+						{ menuConstructor( menu_ref ) }
+					</Nav>
+				</Navbar.Collapse>
 
 			</Container>
 		</Navbar>

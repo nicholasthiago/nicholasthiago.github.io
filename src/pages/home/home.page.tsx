@@ -30,7 +30,7 @@ const Home = () => {
 
 			</div>
 
-			<div className={'tw-flex tw-flex-col tw-flex-1 tw-bg-slate-500'}></div>
+			<div className={ 'home-image tw-flex-1 tw-bg-slate-500'}></div>
 		</div>
 	);
 };

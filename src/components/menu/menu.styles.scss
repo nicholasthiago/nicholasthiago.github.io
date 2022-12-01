@@ -9,21 +9,27 @@
 	> .container {
 		@include flex-row;
 		flex-grow: 1;
+		flex-wrap: wrap;
+		align-items: flex-start;
 		justify-content: space-between !important;
 
-		@media ( width < 768px ) {
+		@media ( width < 680px ) {
 			margin: auto 1rem;
 			justify-content: space-between !important;
 
 			> .navbar-collapse {
-				width: 50%;
-				flex: 3;
+				width: 100%;
+				flex: 3 2;
 			}
 
 			> .menu-contact {
 				margin-left: 1rem;
 				flex: 1;
 			}
+		}
+
+		> .navbar-toggler {
+
 		}
 
 		> .menu-contact {
@@ -38,7 +44,7 @@
 			}
 		}
 
-		.navbar-collapse {
+		> .navbar-collapse {
 			margin: 0;
 			flex-grow: 0;
 			justify-content: flex-end !important;
