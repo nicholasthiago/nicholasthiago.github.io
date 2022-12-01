@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.720ebf63.css",
-    "main.js": "/static/js/main.276edf6a.js",
+    "main.css": "/static/css/main.7cbabb52.css",
+    "main.js": "/static/js/main.947bb150.js",
     "static/js/787.3c328379.chunk.js": "/static/js/787.3c328379.chunk.js",
     "static/media/finance-tracker.jpg": "/static/media/finance-tracker.2e32c80f4ecd1540d690.jpg",
     "index.html": "/index.html",
-    "main.720ebf63.css.map": "/static/css/main.720ebf63.css.map",
-    "main.276edf6a.js.map": "/static/js/main.276edf6a.js.map",
+    "main.7cbabb52.css.map": "/static/css/main.7cbabb52.css.map",
+    "main.947bb150.js.map": "/static/js/main.947bb150.js.map",
     "787.3c328379.chunk.js.map": "/static/js/787.3c328379.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.720ebf63.css",
-    "static/js/main.276edf6a.js"
+    "static/css/main.7cbabb52.css",
+    "static/js/main.947bb150.js"
   ]
 }
