@@ -39,11 +39,6 @@ const ProjectItem = ({ project }: Props ) => {
 	return (
 		<Container className={'project-item tw-flex tw-flex-col tw-items-center tw-gap-3'}>
 
-			<Image src={ FinanceThumb }
-				className={'tw-rounded-lg tw-max-w-screen-md tw-max-h-screen-md'}
-				style={{ scale:'0.8', marginBottom:'-3.5rem', border:'1.5px solid #DDD'}}
-			/>
-
 			<h4 className={'project-title tw-text-xl tw-text-gray-700'}> { project.title } </h4>
 
 			<div className={'project-langs tw-flex tw-flex-row tw-justify-center tw-gap-2'}>
