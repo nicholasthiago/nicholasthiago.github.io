@@ -67,7 +67,7 @@ const ProjectItem = ({ project }: Props ) => {
 
 				<Button
 					className={'project-redirect tw-bg-gray-800 tw-border-gray-800 tw-font-medium'}
-					onMouseDown={ () => window.location.href = 'https://github.com/nicholasthiago' + project.link }
+					onMouseDown={ () => window.location.href = 'https://github.com/nicholasthiago/' + project.key }
 				>
 					{'Code on GitHub'}
 				</Button>
