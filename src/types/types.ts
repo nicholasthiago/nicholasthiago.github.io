@@ -14,5 +14,6 @@ export type ProjectRef = {
 		link	: string	;
 		langs	: string[]	;
 		about	: string	;
+		onGit	: boolean	;
 	}
 };

@@ -13,29 +13,11 @@
 		align-items: flex-start;
 		justify-content: space-between !important;
 
-		@media ( width < 680px ) {
-			margin: auto 1rem;
-			justify-content: space-between !important;
-
-			> .navbar-collapse {
-				width: 100%;
-				flex: 3 2;
-			}
-
-			> .menu-contact {
-				margin-left: 1rem;
-				flex: 1;
-			}
-		}
-
-		> .navbar-toggler {
-
-		}
-
 		> .menu-contact {
 			@include setColor( #f8fafc, #475569, #cbd5e1 );
 			@include setHover( #f8fafc, #1e293b, #334155 );
 			white-space: nowrap;
+			max-width: fit-content;
 
 			&:active {
 				color: #444;
@@ -65,6 +47,26 @@
 						}
 					*/
 				}
+			}
+		}
+
+		// media rules for small menu size
+		@media ( width < 768px ) {
+			margin: auto 1rem;
+			justify-content: space-between !important;
+
+			> .menu-title {
+				flex-grow: 1;
+				text-align: start;	
+			}
+
+			> .navbar-collapse {
+				width: 100vw;
+			}
+
+			> .menu-contact {
+				margin-left: 1rem;
+				flex: 1;
 			}
 		}
 	}

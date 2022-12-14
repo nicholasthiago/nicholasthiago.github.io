@@ -19,8 +19,7 @@ const menuConstructor = ( ref: MenuRef ) =>
 				<Nav.Link href={ option.route }
 					className={ `menu-item-${ option.title }` }
 					onMouseDown={ () => console.log( option.route ) }
-				>
-					{ option.title }
+				> { option.title }
 				</Nav.Link>
 			</Link>
 		);
@@ -37,7 +36,7 @@ const Menu = ({ dark = false } : MenuProps ) => {
 		>
 			<Container>
 
-				<Link to={'/'}>
+				<Link className={'menu-title'} to={'/'}>
 					<Navbar.Brand> {'Nicholas Thiago'} </Navbar.Brand>
 				</Link>
 

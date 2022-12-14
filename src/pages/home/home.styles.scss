@@ -18,7 +18,7 @@
 			margin: 0 auto 2rem;
 
 			&.home-actions {
-				> button {
+				a, button {
 					font-weight: 600;
 					flex: 1;
 				}
@@ -60,6 +60,16 @@
 				}
 
 				
+			}
+
+			&.home-stats {
+				flex-grow: 1;
+				width: 100vw;
+				padding-top: 1.5rem;
+				align-items: center;
+				justify-content: flex-start;
+
+				h6 { width: 75% }
 			}
 		}
 	}
