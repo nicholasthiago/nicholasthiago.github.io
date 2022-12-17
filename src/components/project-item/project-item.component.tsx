@@ -37,9 +37,11 @@ const ProjectItem = ({ project }: Props ) => {
 	};
 
 	return (
-		<Container className={'project-item tw-flex tw-flex-col tw-items-center tw-gap-3'}>
+		<Container className={'project-item tw-flex tw-flex-col tw-items-center tw-gap-3 tw-mb-8 tw-mt-2'}>
 
 			<h4 className={'project-title tw-text-xl tw-text-gray-700'}> { project.title } </h4>
+
+			<h6 className={'project-about tw-text-base tw-text-gray-500 tw-max-w-screen-md tw-text-start'}> { project.about } </h6>
 
 			<div className={'project-langs tw-flex tw-flex-row tw-justify-center tw-gap-2'}>
 			{	( project.langs ).map( ( lang, i ) => {
@@ -49,8 +51,6 @@ const ProjectItem = ({ project }: Props ) => {
 					> { lang } </span>
 				})
 			} </div>
-
-			<h6 className={'project-about tw-text-base tw-text-gray-500 tw-max-w-screen-md tw-text-start'}> { project.about } </h6>
 
 			<div className={'project-links tw-flex tw-flex-row tw-gap-3'}>
 				<Button

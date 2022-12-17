@@ -11,24 +11,24 @@ export interface SkillItemRef {
 export const skill_ref: Array < SkillItemRef > = [
 	{
 		lang : 'React JS'		,
-		exp	 : '6 years'		,
+		exp	 : '+6 years'		,
 	},{
 		lang : 'TypeScript'		,
-		exp	 : '3 years'		,
+		exp	 : '+3 years'		,
 	},{
 		lang : 'JavaScript'		,
-		exp	 : '6 years'		,
+		exp	 : '+6 years'		,
 	},{
-		lang : 'HTML5'			,
-		exp	 : '6 years'		,
+		lang : 'Node.JS'		,
+		exp	 : '+3 years'		,
 	},{
-		lang : 'CSS3'			,
-		exp	 : '6 years'		,
+		lang : 'Express'		,
+		exp	 : '+1 year'		,
+	},{
+		lang : 'GraphQL'		,
+		exp	 : '+1 year'		,
 	},{
 		lang : 'Python'			,
-		exp	 : '1 year'			,
-	},{
-		lang : 'Django'			,
-		exp	 : '1 year'			,
+		exp	 : '+1 year'		,
 	},
 ];
