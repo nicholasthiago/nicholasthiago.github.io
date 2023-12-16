@@ -1,7 +1,5 @@
-import { Badge, Button, Container, Image } from "react-bootstrap";
-import { LinkContainer as Link } from 'react-router-bootstrap';
+import { Button, Container } from "react-bootstrap";
 
-import FinanceThumb from 'assets/finance-tracker.jpg';
 
 type Props = {
 	project: {

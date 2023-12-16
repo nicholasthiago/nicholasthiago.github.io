@@ -20,13 +20,13 @@ const Home = () => {
 					<h6 className={ style.h6 + 'tw-mb-0'}> {'Designing and Developing web and mobile applications for more than 5 years, as a Software Developer.'} </h6>
 				</div>
 
-				<div className={ 'home-actions' + style.row + 'tw-gap-2'}>
+				<div className={ 'home-actions' + style.col + 'tw-gap-4 tw-items-start'}>
 					<Link to={'/contact'}>
-						<Button className={'act-hire'}>	{'Hire me'	} </Button>
+						<Button className={'act-hire shadow-sm'}>	{'Hire me'	} </Button>
 					</Link>
 					
 					<Link to={'/projects'}>
-						<Button className={'act-proj'}>	{'Projects'	} </Button>
+						<Button className={'act-proj shadow-sm'}>	{'Projects'	} </Button>
 					</Link>
 				</div>
 
@@ -43,7 +43,7 @@ const Home = () => {
 				<div className={ 'home-stats tw-bg-slate-700 tw-p-' + style.col }>
 					<h6 className={ style.h4 + 'tw-text-slate-100 tw-font-bold'	 }> {'Experience'} </h6>
 					<h6 className={ style.h6 + 'tw-text-slate-100 tw-font-normal'}> {'Over 5 years as'} </h6>
-					<h6 className={ style.h6 + 'tw-text-slate-100 tw-font-normal'}> {'Front-End Developer at Prometheus Systems, Brazil'} </h6>
+					<h6 className={ style.h6 + 'tw-text-slate-100 tw-font-normal'}> {'Full Stack Developer at Prometheus Systems, Brazil'} </h6>
 				</div>
 
 			</div>

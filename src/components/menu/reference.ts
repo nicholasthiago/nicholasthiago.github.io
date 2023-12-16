@@ -13,15 +13,11 @@ export const menu_ref: MenuRef = {
 		route: '/'			,
 	},
 	about	: {
-		title: 'About'		,
-		route: '/about'		,
+		title: 'About Me'	,
+		route: 'https://github.com/nicholasthiago'	,
 	},
 	projs	: {
 		title: 'Projects'	,
 		route: '/projects'	,
-	},
-	profs	: {
-		title: 'Profiles'	,
-		route: '/profiles'	,
 	},
 };

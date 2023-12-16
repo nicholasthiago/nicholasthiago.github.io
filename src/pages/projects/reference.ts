@@ -19,5 +19,14 @@ export const project_ref: ProjectRef = {
 		langs	: [ 'NextJS', 'TypeScript', 'GraphQL', 'Node' ],
 		about	: 
 			'This project has a great load of information about food nutrition, to select some food and check all the nutrition stats, using tags to better identify each income or expense. It uses NextJS with TypeScript, together with GraphQL ( Apollo ) to fuel the front-end.',
-	}
+	},
+	'health-care-remote': {
+		key		: 'health-care-remote'			,
+		title	: 'Health Care Remote'	,
+		link	: 'https://health-care-remote.vercel.app/'	,
+		onGit	: false					,
+		langs	: [ 'NextJS', 'JavaScript', 'MongoDB', 'Node', 'Redux' ],
+		about	: 
+			'This project came from an idea of making simple doctor appointments easier, having an emergency queue, scheduled appointments and even prescriptions.',
+	},
 }

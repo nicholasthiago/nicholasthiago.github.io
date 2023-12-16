@@ -19,6 +19,9 @@ export const skill_ref: Array < SkillItemRef > = [
 		lang : 'JavaScript'		,
 		exp	 : '+6 years'		,
 	},{
+		lang : 'NextJS'			,
+		exp	 : '+3 years'		,
+	},{
 		lang : 'Node.JS'		,
 		exp	 : '+3 years'		,
 	},{
